@@ -14,7 +14,7 @@ function answerTask2() {
         let min = params[0];
         params.forEach(function (value) {
             if (min > +value) min = +value;
-        })
+        });
         return min;
     };
 
