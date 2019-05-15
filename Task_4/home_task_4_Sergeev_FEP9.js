@@ -74,7 +74,7 @@ function answerTask4() {
             newArr.push(array[i]);
         }
         return newArr;
-    }
+    };
 
     let array = [1, 2, 65, 6, 71];
     alert(delFirstElement(array));
@@ -87,7 +87,7 @@ function answerTask5() {
     let addElements = (array, ...elements) => {
         elements.forEach(elem => array[array.length] = elem);
         return array;
-    }
+    };
 
     let array = [1, 2, 65, 6, 71];
     alert(addElements(array, 64, 46, 5, 4));
@@ -99,11 +99,16 @@ function answerTask6() {
     Остальные параметры - объекты-источники, полями которых будет расширяться целевой объект.*/
 
     let extend = (obj, ...params) => {
+        let newObj = {};
+        for (let key in obj) newObj[key] = obj[key];
+
         params.forEach(param => {
-            for (let key in param) obj[key] = param[key];
+            for (let key in param) {
+                newObj[key] = param[key];
+            }
         });
-        return obj;
-    }
+        return newObj;
+    };
 
     let source = {firstname: 'Tom', age: 10};
     let s = extend(source, {firstname: 'John'}, {lastname: 'Doe'});
@@ -124,10 +129,11 @@ function answerTask7() {
             console.log('%c%s', 'font-weight: bold;', `${(author || "Anonymous")}, ${date}`);
             console.log(message);
         } else {
-            alert ("Данные переданы некорректно");
+            alert("Данные переданы некорректно");
         }
 
-    }
+    };
+
     setComment('2016-11-02', 'Everything is ok', 'John');
     setComment('2016-11-02', 'You could do it better!');
 }
@@ -139,10 +145,11 @@ function answerTask8() {
     let createTimer = () => {
         let t = performance.now();
         return () => performance.now() - t;
-    }
+    };
+
     let timer = createTimer();
     alert('!');
-    alert( timer() );
+    alert(timer());
 }
 
 function answerTask9() {
@@ -152,14 +159,14 @@ function answerTask9() {
     let createAdder = (elem) => {
         let first = elem;
         return (second) => first + second;
-    }
+    };
 
     var hello = createAdder('Hello, ');
-    alert( hello('John') );
-    alert( hello('Harry') );
+    alert(hello('John'));
+    alert(hello('Harry'));
 
     var plus = createAdder(5);
-    alert( plus(1) );
-    alert( plus(5) );
+    alert(plus(1));
+    alert(plus(5));
 
 }
