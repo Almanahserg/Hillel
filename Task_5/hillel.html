@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="home_task_5_Sergeev_FEP9.js"></script>
+    <style>
+        p {
+            margin: 10px auto;
+            border: 1px solid gray;
+            width: 800px;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h3>Методы объектов и контекст исполнения функции</h3>
+<p>
+    <b>Задание 1.</b><br>
+    Создайте объект calculator с методами:<br>
+    • read() запрашивает prompt для двух значений и сохраняет их как свойства объекта x, y<br>
+    • sum() возвращает сумму этих двух значений<br>
+    • multi() возвращает произведение этих двух значений<br>
+    • diff() возвращает разницу<br>
+    • div() возвращает частное<br>
+    <button onclick="answerTask1()">Решение!</button>
+</p>
+<p>
+    <b>Задание 2.</b><br>
+    Создайте объект coffeeMachine со свойством message: ‘Your coffee is ready!’
+    и методом start(), при вызове которого – coffeeMachine.start() – через 3 секунды появляется окно с сообщением,
+    записанным в свойстве объекта message.<br>
+    <button onclick="answerTask2()">Решение!</button>
+</p>
+<p>
+    <b>Задание 3.</b><br>
+    Создайте объект counter с методами увеличения, уменьшения значения счетчика и методом возврата текущего значения.
+    Используйте концепцию chaining для создания цепочки вызовов.<br>
+    <button onclick="answerTask3()">Решение!</button>
+</p>
+<p>
+    <b>Задание 4.</b><br>
+    Создайте объект с данными: x, y и методами: getSum, getDiff, getMulti, getDiv. Методы объекта ничего не реализуют,
+    а только выводят в alert сообщения вида ‘1 + 1 = 2’ или ‘1 / 0 = Infinity’.
+    Для расчетов все методы используют функционал ранее созданного калькулятора.<br>
+    <button onclick="answerTask4()">Решение!</button>
+</p>
+<p>
+    <b>Задание 5.</b><br>
+    Есть следующий код:<br>
+    <code>var country = {<br>
+        name: 'Ukraine',<br>
+        language: 'ukrainian',<br>
+        capital: {<br>
+        name: 'Kyiv',<br>
+        population: 2907817,<br>
+        area: 847.66<br>
+        }<br>
+        };<br>
+        <br>
+        function format(start, end) {<br>
+        console.log(start + this.name + end);<br>
+        }<br>
+    </code><br><br>
+    Допишите код, чтобы в консоли браузера появились строки, которые написаны в комментариях:<br>
+    <code>format.call(/* Ваш код */); // Ukraine<br>
+        format.apply(/* Ваш код */); // [Ukraine]<br>
+        format.call(/* Ваш код */); // Kyiv<br>
+        format.apply(/* Ваш код */); // Kyiv<br>
+        format.apply(/* Ваш код */); // undefined<br>
+    </code>
+    <button onclick="answerTask5()">Решение!</button>
+</p>
+<p>
+    <b>Задание 6.</b><br>
+    Создайте объект user с полем name. Создайте функцию format с параметрами start и end:<br>
+    <code>    function format(start, end) {<br>
+        console.log(start + this.name + end);<br>
+        };</code><br>
+    Привяжите функцию format() к объекту user таким образом, чтобы ее вызов возвращал отформатированное имя пользователя
+    Реализуйте 2 версии текущего задания, используя:<br>
+    1. Анонимную функцию;<br>
+    2. Метод bind().<br>
+    <button onclick="answerTask6()">Решение!</button>
+</p>
+<p>
+    <b>Задание 7.</b><br>
+    Напишите функцию concat, которая соединяет две строки, разделенные каким-то символом:
+    разделитель и строки передаются в параметрах функции. Используя карринг, создайте новую функцию hello,
+    которая которая выводит приветствие тому, кто передан в ее параметре: <br>
+    <button onclick="answerTask7()">Решение!</button>
+</p>
+<h3>Level Up</h3>
+<h3>Рекурсия</h3>
+<p>
+    <b>Задание 8.</b><br>
+    Напишите функцию, которая возвращает куб переданного числа, аналог Math.pow(x, 3)<br>
+    a) используя цикл <br>
+    b) используя рекурсию:<br>
+    <button onclick="answerTask8()">Решение!</button>
+</p>
+<p>
+    <b>Задание 9.</b><br>
+    Придумайте алгоритм расчета суммы всех фактических параметров функции с использованием только рекурсии:<br>
+    <button onclick="answerTask9()">Решение!</button>
+</p>
+</body>
+</html>
