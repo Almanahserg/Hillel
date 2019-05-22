@@ -37,7 +37,7 @@ function Circle(x, y, radius, color) {
     Figure.call(this, x, y, color);
     this.radius = radius;
     this.draw = (canvas) => {
-        canvas.fillStyle = "#00B8FF";
+        canvas.fillStyle = this.color;
         canvas.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
         canvas.fill();
     }
@@ -67,8 +67,8 @@ function Canvas(elementID) {
 function startDrawing() {
     let line1 = new Line(50, 250, 200, 200, 'blue');
     let line2 = new Line(60, 260, 210, 210, 'blue');
-    let circle1 = new Circle(120, 120, 50, 'blue');
-    let circle2 = new Circle(100, 80, 30, 'blue');
+    let circle1 = new Circle(120, 120, 50, '#00B8FF');
+    let circle2 = new Circle(100, 80, 30, '#00B8FF');
     let rect1 = new Rect(260, 130, 60, 120, "#00FF7D");
     let rect2 = new Rect(280, 120, 90, 50, "#DD12A8");
     let rect3 = new Rect(350, 150, 60, 40, "#DDDB00");
