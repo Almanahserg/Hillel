@@ -42,7 +42,6 @@ class Draw {
         for (let i = 0; i < this.obj.lineTo.length; i++) {
             this.canvas.lineTo(this.obj.lineTo[i][0], this.obj.lineTo[i][1]);
         }
-
     }
 
     arc() {
@@ -126,7 +125,6 @@ function startDrawing() {
 
     let drawArea = new Canvas('canvasID');
     drawArea.add(wave, line1, line2, circle1, circle2, rect1, rect2, rect3);
-
 }
 
 
