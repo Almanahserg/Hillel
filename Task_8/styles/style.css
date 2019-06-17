@@ -18,6 +18,10 @@ canvas {
     margin: auto;
 }
 
+canvas:hover {
+    cursor: crosshair;
+}
+
 .button {
     border-color: cadetblue;
     box-shadow: 0 2px 5px black;
