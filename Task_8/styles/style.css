@@ -2,9 +2,6 @@ body {
     margin: 0;
     padding: 0;
 }
-.main {
-
-}
 
 .main > div {
     text-align: center;
@@ -25,8 +22,4 @@ canvas:hover {
 .button {
     border-color: cadetblue;
     box-shadow: 0 2px 5px black;
-}
-
-h1 {
-    text-align: center;
 }
