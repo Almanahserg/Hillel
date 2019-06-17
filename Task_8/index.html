@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Falling Cubes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="main">
+    <div class="menu">
+        <h1>Falling Cubes</h1>
+        <p>Level speed: <b id="lvl"></b></p>
+        <p>Count cubes: <b id="score"></b></p>
+        <button onclick="start();">START</button>
+        <button onclick="stop();">STOP</button>
+    </div>
+    <div>
+        <canvas id="canvasID" width="500" height="300"></canvas>
+    </div>
+</div>
+
+<script src="scripts/game.js"></script>
+</body>
+</html>

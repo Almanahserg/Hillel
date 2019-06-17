@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.main {
+
+}
+
+.main > div {
+    text-align: center;
+    padding: 5px;
+}
+
+canvas {
+    border: 1px solid black;
+    border-bottom: 3px solid red;
+    box-shadow: 0 0 5px black;
+    margin: auto;
+}
+
+.button {
+    border-color: cadetblue;
+    box-shadow: 0 2px 5px black;
+}
+
+h1 {
+    text-align: center;
+}
